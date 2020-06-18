@@ -25,7 +25,7 @@ limitations were allowed:
 * For convenience of review process I committed some secrets to git: db dsn, 
 jwt secret, etc. For sure, such things MUST NOT be committed in real production 
 development. 
-* No tests
+* No tests.
 * Controller is not a singleton and may create several connections pools to 
 database from base and auth routers - could be fixed with implementation of 
 controller with singleton pattern.
@@ -38,12 +38,12 @@ about time and attention task than actual work.
 
 Configuration is made through environment variables:
 
-| Variable         | Definition                | Default                        |   |   |
-|------------------|---------------------------|--------------------------------|---|---|
-| HTTP_SERVER_PORT | http server port          | 8080                           |   |   |
-| LOG_LEVEL        | Python root logging level | info                           |   |   |
-| DB_DSN           | Postgres DSN              | postgresql://task:task@db/task |   |   |
-| JWT_SECRET       | Secret for jwt auth       |                                |   |   |
+| Variable         | Definition                | Default                        |
+|------------------|---------------------------|--------------------------------|
+| HTTP_SERVER_PORT | http server port          | 8080                           | 
+| LOG_LEVEL        | Python root logging level | info                           | 
+| DB_DSN           | Postgres DSN              | postgresql://task:task@db/task |
+| JWT_SECRET       | Secret for jwt auth       |                                |  
 
 # Deployment
 
