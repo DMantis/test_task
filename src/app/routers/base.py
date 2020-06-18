@@ -27,7 +27,7 @@ async def startup_event():
 
 
 @router.on_event('shutdown')
-async def startup_event():
+async def shutdown_event():
     await controller.disconnect()
 
 
