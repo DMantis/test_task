@@ -40,7 +40,8 @@ Configuration is made through environment variables:
 
 | Variable         | Definition                | Default                        |
 |------------------|---------------------------|--------------------------------|
-| HTTP_SERVER_PORT | http server port          | 8080                           | 
+| HTTP_SERVER_PORT | http server port          | 8080                           |
+| HTTP_SERVER_HOST | http server host          | 0.0.0.0                        |
 | LOG_LEVEL        | Python root logging level | info                           | 
 | DB_DSN           | Postgres DSN              | postgresql://task:task@db/task |
 | JWT_SECRET       | Secret for jwt auth       |                                |  
