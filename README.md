@@ -60,8 +60,6 @@ under 'migrations' one-shot service definition.
 
 For the sake of simplicity the test task assumed docker-compose deployment. 
 
-### Apply migrations
-
 ```bash
 docker-compose up -d db
 docker-compose up migrations
