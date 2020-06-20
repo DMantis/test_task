@@ -119,7 +119,7 @@ class Controller(Database):
         Vulnerable to race conditions if not in database transaction,
         so this method MUST BE executed in transaction.
 
-        Transfer recipient must be be set either via id or username.
+        Recipient must be be set either via id or username.
 
         :param from_id: sender id.
         :param amount: transfer amount.
@@ -153,10 +153,11 @@ class Controller(Database):
             to_id=client_to.id)
         await self.execute(query)
 
-    async def list_transfers(self, client_id: int, page_num: int = 0, page_size: int = 25):
+    async def list_transfers(self, client_id: int, page_num: int = 0,
+                             page_size: int = 25):
         """ Paged method to list user related transfers"""
         # haven't got much time to figure out this query in sqlalchemy, so
-        # make it by hand
+        # made it by hand
         query = "SELECT transfers.amount, from_c.username as from_username, " \
                 "to_c.username as to_username, transfers.created_at " \
                 "FROM transfers " \
